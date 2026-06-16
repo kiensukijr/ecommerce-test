@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
 import { RegisterPage } from '../../pages/RegisterPage';
-import { userRegisterPass, userRegisterFail } from '../../data/register.data';
+import { userRegisterPassUi, userRegisterFail } from '../../data/register.data';
 
 
-for (const user of userRegisterPass) {
+for (const user of userRegisterPassUi()) {
     test(`Register test for ${user.id}`, async ({ page }) => {
 
         const registerPage = new RegisterPage(page);

@@ -15,7 +15,7 @@ for (const user of userRegisterPass) {
 
         });
         
-        expect(response.status()).toBe(400)
+        expect(response.status()).toBe(201)
 
         const body = await response.json()
         console.log(body)
